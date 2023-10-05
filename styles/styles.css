@@ -12,24 +12,91 @@ Table of Contents:
     1. Global Styles
 ////////////////////////*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --peach: #f9c48bff;
+    --atomic-tangerine: #f69051ff;
+    --burnt-sienna: #f26d40ff;
+    --black-bean: #260803ff;
+    --seashell: #fdefecff;
+}
+
 body {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
+    color: var(--black-bean);
 }
 
+html {
+    font-size: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+
+
 /*////////////////////////
-    2. Typography
+        2. Typography
 ////////////////////////*/
 
+h1 {
+    margin: 0 0 0.5rem 0;
+}
 
+p {
+    margin: 1rem 0;
+}
 
 /*////////////////////////
     3. Areas
 ////////////////////////*/
 
+section {
+    background-color: var(--seashell);
+    border-radius: .5rem;
+    box-shadow: 0 .0625rem .25rem rgba(0, 0, 0, 0.16);
+    margin: 2rem;
+    padding: 2rem;
+}
 
-
+.image-wrapper {
+    flex-basis: 10px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
 
 /*////////////////////////
     2. Media Queries
 ////////////////////////*/
+
+
+
+/* Alles wat men buiten de media query specificeert, geldt dan voor mobiele apparaten */
+
+body {
+    background-color: var(--peach)
+}
+
+/* Minimaal 768px betekend regels die gelden voor tablets */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 12px;
+        background-color: var(--atomic-tangerine);
+    }
+}
+
+/* Minimaal 992px betekend regels die gelden voor kleine computerschermen */
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 14px;
+        background-color: var(--burnt-sienna);
+    }
+}
